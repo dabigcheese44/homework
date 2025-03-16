@@ -1,0 +1,48 @@
+/* Define Global Variables */
+:root {
+    --menu-bg: #011412;
+    --menu-text: #ffffff;
+    --hover-color: #e09e61;
+}
+
+/* Basic styling for the side menu */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;  /* Start off-screen */
+    width: 35%;
+    height: 100vh;
+    background-color: var(--menu-bg);
+    transition: left 0.3s ease-in-out;
+    overflow-y: auto; /* Prevents content clipping on smaller screens */
+}
+
+/* Active class for showing menu */
+.side-menu.active {
+    left: 0;
+}
+
+/* Remove default list styles */
+.side-menu ul {
+    list-style: none;
+    margin: 7%;
+    padding: 0;
+}
+
+/* List items */
+.side-menu ul li {
+    padding: 2rem;
+}
+
+/* Menu links */
+.side-menu a {
+    color: var(--menu-text);
+    font-size: 1.125rem; /* Equivalent to 18px */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.side-menu a:hover {
+    color: var(--hover-color);
+}

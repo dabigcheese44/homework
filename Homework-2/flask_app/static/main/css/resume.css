@@ -1,0 +1,101 @@
+/* Define Global Variables */
+:root {
+    --font-large: 1.6rem;
+    --font-medium: 1.25rem;
+    --font-small: 0.9rem;
+    --text-primary: #000;
+}
+
+/* Resume Container */
+.resume-container {
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* Institution Header */
+.institution-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Institution Name */
+.institution-name {
+    font-size: var(--font-large);
+}
+
+/* Institution Location */
+.institution-location {
+    text-align: right;
+    font-size: var(--font-small);
+}
+
+/* Position Header */
+.positions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Position Title */
+.position-title {
+    font-size: var(--font-medium);
+}
+
+/* Position Dates */
+.position-dates {
+    font-size: var(--font-small);
+    text-align: right;
+}
+
+/* Responsibilities */
+.responsibilities {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+    margin-right: 40%;
+    line-height: 1.5;
+}
+
+/* Experience Name */
+.experience-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Experience Description */
+.experience-description {
+    margin-left: 2rem;
+    margin-right: 40%;
+    line-height: 1.5;
+}
+
+/* Skills List */
+.skills-list {
+    padding-left: 2rem;
+    list-style-type: square;
+    margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .institution-header, 
+    .positions-header {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .institution-location, 
+    .position-dates {
+        text-align: left;
+    }
+
+    .responsibilities,
+    .experience-description {
+        margin-right: 2rem;
+    }
+}

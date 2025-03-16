@@ -1,0 +1,102 @@
+/* Define CSS Variables */
+:root {
+    --primary-bg: #053d38;
+    --hover-bg: #02201d;
+    --hover-color: #e09e61;
+    --btn-color: #007bff;
+    --btn-hover: #2c47c1;
+    --border-color: #e09e61;
+}
+
+/* Feedback Button */
+.feedback-toggle {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    padding: 1rem 1.5rem;
+    background-color: var(--primary-bg);
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 0 10% 10% 0;
+    cursor: pointer;
+    z-index: 100;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.feedback-toggle:hover {
+    background-color: var(--hover-bg);
+    color: var(--hover-color);
+}
+
+/* Feedback Form */
+.feedback-form {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto; /* Prevents overflow */
+    padding: 2rem;
+    color: #ffffff;
+    background-color: var(--primary-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 5px var(--hover-bg);
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Label Styling */
+.feedback-form label {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+/* Input & Textarea Styling */
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Button Styling */
+.feedback-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--btn-color);
+    color: white;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.feedback-form button:hover {
+    background-color: var(--btn-hover);
+    color: var(--hover-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .feedback-form {
+        width: 80%;
+        padding: 1.5rem;
+    }
+
+    .feedback-toggle {
+        padding: 0.75rem 1rem;
+    }
+}
